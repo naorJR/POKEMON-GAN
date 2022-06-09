@@ -4,7 +4,7 @@
 </p>
 Generating Pokemon with a Generative Adversarial Network
 
-## Overview 
+## Overview:
 In this project i coded 3 diffrent models - AEGAN,DCGAN14000,AEGAN819,in order to generate fake pokemons.
 
 ## Guide :
