@@ -1,6 +1,6 @@
 # POKEMON-GAN
 <p align="center">
-<img align="mid" src="https://raw.githubusercontent.com/naorJR/POKEMON-GAN/main/Images/International_Pokémon_logo.svg.webp" alt=" Naor | LinkedIn" width="21px"/></a>
+<img align="mid" src="https://raw.githubusercontent.com/naorJR/POKEMON-GAN/main/Images/c89b6bc7-0673-4720-b761-bab17c7d53fa-xoq7fo_119x.jpg" alt=" Naor | LinkedIn" width="21px"/></a>
 </p>
 
 <h3 align="center">
