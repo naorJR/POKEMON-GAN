@@ -2,6 +2,16 @@
 <p align="center">
 <img align="mid" src="https://raw.githubusercontent.com/naorJR/POKEMON-GAN/main/Images/International_Pokémon_logo.svg.webp"></a>
 </p>
+Generating Pokemon with a Generative Adversarial Network
+##Overview 
+In this project i coded 3 diffrent models - AEGAN,DCGAN14000,AEGAN819,in order to generate fake pokemons.
+
+## Guide :
+Every model has its own folder and in each folder we can find a link to the data set, result images, ipynb of the model and 
+the weigths of the network.
+
+## DCGAN819 :
+
 
 <h3 align="center">
 Hi there, I'm Naor 👋
