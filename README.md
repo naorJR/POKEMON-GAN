@@ -28,11 +28,11 @@ The discriminator takes an image as input, and tries to classify it as "real" or
 
 How do we train the generator :
 
--We generate a batch of images using the generator, pass the into the discriminator
+- We generate a batch of images using the generator, pass the into the discriminator
 
--We calculate the loss by setting the target labels to 1 i.e. real. We do this because the generator's objective is to "fool" the discriminator.
+- We calculate the loss by setting the target labels to 1 i.e. real. We do this because the generator's objective is to "fool" the discriminator.
 
--We use the loss to perform gradient descent i.e. change the weights of the generator, so it gets better at generating real-like images to "fool" the discriminator.
+- We use the loss to perform gradient descent i.e. change the weights of the generator, so it gets better at generating real-like images to "fool" the discriminator.
 
 How do we train the discriminator :
 
