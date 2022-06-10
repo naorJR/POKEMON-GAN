@@ -55,6 +55,23 @@ The only diffrence between this model and the previous model is the dataset that
 ![image](https://user-images.githubusercontent.com/93729949/173015100-ec6df66b-2d8a-47da-8a78-cff3df6bbc2e.png)
 
 ## AEGAN :
+In this model we added 2 networks : encoder and another discriminator.
+The idea behind this model is to create another network that transform an image into a latent vector,and to creat "2 way  road" : a generator that transforms a latent vector to an image and an encoder that does the opposite way.
+Now we will have to work with 2 discriminators - one for the images and one for the latent.
+
+## THE Architecture :
+
+![image](https://user-images.githubusercontent.com/93729949/173030977-b89d9437-8fdb-4cd2-9137-c2f75231e52b.png)
+
+G - Generator , E - Encoder , D_z - Latent Descrrimnator , D_x - Image Discriminator
+The general idea about the training is the same as before but now we  have two source of fake images - G(Z) AND G(E(X)).
+E and G try to minimize this loss while Dx and Dz try to maximize it. G tries to trick Dx into believing the generated samples x_hat and the autoencoded samples x_tilde are real, while Dx tries to distinguish those from the real samples x. E tries to trick Dz into believing the generated samples z_hat and the autoencoded samples z_tilde are real, while Dz tries to distinguish those from the real samples z. G and E have to work together so that the autoencoded samples G(E(x))=x_tilde are similar to the original x, and that the autoencoded samples E(G(z))=z_tilde are similar to the original z.
+
+
+
+
+The result :
+
 
 ![image](https://user-images.githubusercontent.com/93729949/173015031-af71119e-97c7-42bc-8305-02c26cf16a6f.png)
 
