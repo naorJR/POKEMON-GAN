@@ -9,7 +9,7 @@ In this project i coded 3 diffrent models - AEGAN,DCGAN14000,AEGAN819,in order t
 
 ## Guide :
 Every model has its own folder and in each folder we can find a link to the data set, result images, ipynb of the model and 
-the weigths of the network.
+the model's weightt.
 
 ## DCGAN819 :
 
