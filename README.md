@@ -13,38 +13,42 @@ the weigths of the network.
 
 ## DCGAN819 :
 
+In this model i created 2 network : generator and discriminator.The dataset used to train this model has only 819 images.
+
+Generator Model
+
+The input to the generator is typically a vector or a matrix of random numbers (referred to as a latent tensor) which is used as a seed for generating an image. The generator will convert a latent tensor of shape (latent_size , 1, 1) into an image tensor of shape 3 x image_size x image_size. To achive this, we'll use the ConvTranspose2d layer from PyTorch, which is performs to as a transposed convolution (also referred to as a deconvolution).
+
+Discriminator Model
+
+The discriminator takes an image as input, and tries to classify it as "real" or "generated". In this sense, it's like any other neural network. We'll use a convolutional neural networks (CNN) which outputs a single number output for every image. We'll use stride of 2 to progressively reduce the size of the output feature map,we could use maxpolling instead of stride .
+
+## Train 
+![image](https://user-images.githubusercontent.com/93729949/173016809-6dd18aff-656a-403b-8eec-27ec6cfcad5e.png)
+
+How do we train the generator :
+-We generate a batch of images using the generator, pass the into the discriminator
+-We calculate the loss by setting the target labels to 1 i.e. real. We do this because the generator's objective is to "fool" the discriminator.
+-We use the loss to perform gradient descent i.e. change the weights of the generator, so it gets better at generating real-like images to "fool" the discriminator.
+
+How do we train the discriminator :
+-We expect the discriminator to output 1 if the image was picked from the real dataset, and 0 if it was generated using the generator network.
+-We first pass a batch of real images, and compute the loss, setting the target labels to 0.85 + gaussian noise (smoothing label).
+-Then we pass a batch of fake images (generated using the generator) pass them into the discriminator, and compute the loss, setting the target labels to 0.15 + gaussian noise.
+-Finally we add the two losses and use the overall loss to perform gradient descent to adjust the weights of the discriminator.
+
+The result :
+
 ![image](https://user-images.githubusercontent.com/93729949/173014816-bb673177-6c04-422e-a357-3d069d5967a6.png)
 
+## DCGAN14000 :
+
+The only diffrence between this model and the previous model is the dataset that used to train the 2 networks,here i use a much larger dataset - 14000 images.
+![image](https://user-images.githubusercontent.com/93729949/173015100-ec6df66b-2d8a-47da-8a78-cff3df6bbc2e.png)
+
+## AEGAN :
+
+![image](https://user-images.githubusercontent.com/93729949/173015031-af71119e-97c7-42bc-8305-02c26cf16a6f.png)
 
 
-<h3 align="center">
-Hi there, I'm Naor 👋
-</h3>
-
-<h2 align="center">
-I'm Electrical and Computer Engineer 💻!
-</h2> 
-🤝 Connect with me: <a href="https://www.linkedin.com/in/naor-cohen-675694223/"><img align="mid" src="https://raw.githubusercontent.com/naorJR/naorJR/main/Images/linkedin.svg" alt=" Naor | LinkedIn" width="21px"/></a>
-</br>
-- 💬 If you have any question/feedback, please do not hesitate to reach out to me!
-
-## 💼 Technical Skills
-
-
-![](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=Python&color=003B57)
-![](https://img.shields.io/badge/Code-C-informational?style=flat&logo=C&color=CC0000)
-![](https://img.shields.io/badge/Code-Matlab-informational?style=flat&logo=Matlab&color=336791)
-![](https://img.shields.io/badge/Code-DeepLearning-informational?style=flat&logo=DeepLearning&color=61DAFB)
-![](https://img.shields.io/badge/Tools-GitHub-informational?style=flat&logo=GitHub&color=181717)
-
-### 🤔 I’m looking for help with finding a job as a developer 
-### ⚡ Fun fact: I watched Prison break 5 times
-
-## 📈 GitHub Stats 
-
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=naorJR)](https://github.com/naorJR)
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=naorJR&layout=compact)](https://github.com/naorJR)
-
-[![Visitors](https://visitor-badge.glitch.me/badge?page_id=naorJR.naorJR)](https://www.linkedin.com/in/naor-cohen-675694223/)
 
