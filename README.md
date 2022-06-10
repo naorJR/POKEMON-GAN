@@ -28,7 +28,7 @@ The discriminator takes an image as input, and tries to classify it as "real" or
 
 How do we train the generator :
 
-- We generate a batch of images using the generator, pass the into the discriminator
+- We generate a batch of images using the generator, pass the into the discriminator.
 
 - We calculate the loss by setting the target labels to 1 i.e. real. We do this because the generator's objective is to "fool" the discriminator.
 
@@ -36,13 +36,13 @@ How do we train the generator :
 
 How do we train the discriminator :
 
--We expect the discriminator to output 1 if the image was picked from the real dataset, and 0 if it was generated using the generator network.
+- We expect the discriminator to output 1 if the image was picked from the real dataset, and 0 if it was generated using the generator network.
 
--We first pass a batch of real images, and compute the loss, setting the target labels to 0.85 + gaussian noise (smoothing label).
+- We first pass a batch of real images, and compute the loss, setting the target labels to 0.85 + gaussian noise (smoothing label).
 
--Then we pass a batch of fake images (generated using the generator) pass them into the discriminator, and compute the loss, setting the target labels to 0.15 + gaussian noise.
+- Then we pass a batch of fake images (generated using the generator) pass them into the discriminator, and compute the loss, setting the target labels to 0.15 + gaussian noise.
 
--Finally we add the two losses and use the overall loss to perform gradient descent to adjust the weights of the discriminator.
+- Finally we add the two losses and use the overall loss to perform gradient descent to adjust the weights of the discriminator.
 
 The result :
 
