@@ -76,7 +76,10 @@ The result :
 ![image](https://user-images.githubusercontent.com/93729949/173015031-af71119e-97c7-42bc-8305-02c26cf16a6f.png)
 
 refrencess:
+
 https://towardsdatascience.com/autoencoding-generative-adversarial-networks-16082512b583
+
 https://jovian.ai/aakashns/06b-anime-dcgan
+
 https://machinelearningmastery.com/how-to-implement-the-inception-score-from-scratch-for-evaluating-generated-images/
 
