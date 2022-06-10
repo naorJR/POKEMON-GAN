@@ -13,6 +13,8 @@ the weigths of the network.
 
 ## DCGAN819 :
 
+![image](https://user-images.githubusercontent.com/93729949/173014816-bb673177-6c04-422e-a357-3d069d5967a6.png)
+
 
 
 <h3 align="center">
